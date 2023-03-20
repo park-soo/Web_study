@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box model padding</title>
+    <style>
+        div{
+            background-color: skyblue;
+            width: 300px;
+            border: 2px solid teal;
+            background-clip: content-box;
+        }
+        div.pad{
+            padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 30px;
+            padding-left: 40px;
+        }
+        div.four{padding: 10px 20px 30px 40px;}
+                        /* 위   오   아   왼 */
+        div.three{padding: 10px 20px 30px;} 
+                        /* 위  오,왼  아 */
+        div.two{padding: 10px 20px;}
+                     /* 위,아  오,왼 */
+        div.one{padding: 10px;}
+                        /* 싹 다 */
+    </style>
+</head>
+<body>
+    <h3>padding 영역 설정</h3>
+    <div>padding 미설정</div><br>
+    <div class="pad">네 방향 별개 설정</div><br>
+    <div class="four">패딩 속성값 4개</div><br>
+    <div class="three">패딩 속성값 3개</div><br>
+    <div class="two">패딩 속성값 2개</div><br>
+    <div class="one">패딩 속성값 1개</div><br>
+</body>
+</html>

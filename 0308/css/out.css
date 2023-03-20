@@ -1,0 +1,10 @@
+body{
+    background-color: darkgoldenrod;
+}
+h1{
+    text-align: center;
+}
+p{
+    color: blue;
+    text-decoration: line-through;
+}

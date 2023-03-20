@@ -1,0 +1,222 @@
+HTML
+
+메타 데이터(metadata)
+    <head></head>안에 표현
+
+DOM (Document Object Model)
+    document
+        Root element <html></html>
+                    element <head></head>
+
+                    element <body></body>
+
+빈요소 (Empty element)
+    안 닫아 주는것들
+        <img src="" alt="">
+        <br>    
+        <hr>
+
+포함된 요소 (Nesting element)
+
+    <p>My cat is<strong>very</strong>grumpy.</p>    잘된 예시
+    <p>My cat is<strong>verygrumpy.</p></strong>    잘못된 예시 (겹치면 안됌.)
+
+속성 (Attributes)
+    속성은 요소에서 표시되지 않는 내용
+        - 작성은 소문자 권장!
+        - 요소 이름 다음에 바로 오는 속성은 요소 이름과 속성 사이에 공백
+
+
+    참과 거짓 속성 (Boolean Attributes)
+        true false로 처리하는 놈들
+        <input type="text" disabled>
+
+
+작은 따옴표, 큰 따옴표
+    따옴표를 썼으면 처음과 끝을 동일하게
+        <a href="http://www.example.com"></a>   
+        <a href='http://www.example.com'></a>
+
+    "" 안에 따옴표 쓸때는 '' 작은 따옴표를 사용 해야 함.
+
+문자코드
+    키보드 입력이 불가능하거나 HTML 예약어를 기존에 사용하던 의미 그대로 사용하기 위해 별도로 만든 문자셋
+
+
+제목(Heading)
+    <h1></h1> ~ <h6></h6> 글자 크기 순
+    
+    title 속성 > tool tip  (마우스 갖다 대면 설명같은거 나오는거 그런거 라고 함.)
+
+단락(Paragraph)
+    <p></p>
+    <br>
+        줄바꿈
+    <pre></pre>
+        텍스트 그대로
+    <hr>   
+        수평가로선
+
+
+인용구
+    <q></q>
+        앞뒤 큰 따옴표
+    <blockquote></blockquote>
+        별도의 단락 처리
+
+주석 (Comment)
+    <!-- 주석내용: 뭐가 너무 많다 이거 어찌 다 써 -->
+
+
+요소의 타입 ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+    블록 레벨 요소(Block-level element)
+        - 앞뒤 요소 사이에 새로운 줄을 생성
+             전과 이후 요소 사이에 줄바 꿈
+        - 일반적으로 페이지의 구조적 요소를 표현
+        - 블록레벨요소는 인라인 요소에 중첩 불가능
+        - 블록레벨요소는 블렉레벨요소에 중첩 가능
+
+        - <div></div> element
+            주로 요소들의 스타일을 한 번에 적용하기 위해 사용
+    
+    인라인 요소(Inline element)
+        - <span></span> element
+
+
+구조적인 markup tags
+    - 컨텐츠를 보다 읽기 쉽게 보다 편리하도록 구조화
+    - <h1></h1> ~ <h6></h6> , <p></p> 등
+    - css 등 attribute를 통해 구조를 형성할 수도 있다.
+        <span style="font-size: 32px; margin: 21px 0;">
+            is this a top level heading
+        </span>
+
+
+
+<style></style>        
+    inline Style
+    internal Style
+    external style
+
+    우선 순위
+        inline -> internal or external -> 브라우저
+    
+        기본 브라우저 -> 우리가 적용한 
+
+
+
+HTML 이미지(image)
+    이미지 삽입
+        <img src="" alt="">
+            src : 저장된 주소의 URL 주소 명시
+            alt : 로딩되지 않는 경우 대신 표시할 문자열
+            style 속성
+                width, height
+
+
+HTML 목록(List)
+
+        순서없이
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        
+        순서대로
+            <ol>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+
+
+
+HTML 표(table)
+    <tr></tr>   행
+    <td></td>   열
+    rowspan
+    colspan
+    <caption></caption> 표제목
+    <thead>
+        <th></th> td와 기능은 비슷하네 글씨를 좀 더 진하게 된다고 함.
+    </thead>
+    <tbody></tbody>
+    <tfoot></tfoot>
+
+HTML 공간분할
+    블록/인라인
+    iframe
+    layout
+
+
+HTML 웹사이트의 구조화
+    header
+        <header></header>
+            일반적으로 큰 제목과 로고 등이 있는 큰 띠
+    navigation bar
+        <nav></nav>
+            대부분 메뉴, 버튼이나 링크, 탭으로 표현
+    main content
+        <main></main>
+            웹 페이지에서 당신이 원하는 메인 컨텐츠를 포함하는 있는 부분
+    side bar
+        <aside></aside>
+            주변의 정보, 링크 인용부호, 광고 등
+            일반적으로 메인컨텐츠와 연동된 정보 표시
+    footer
+        <footer></footer>
+            일반적으로 작은 정보, 저작권 정보, 연락처 등이 포함.
+
+
+
+
+의미(semantic) 요소
+    non-semantic elements
+
+    semantic elements
+
+
+table 요소를 이용한 레이아웃
+    테이블의 형태를 통해 원하는 영역의 위치를 테이블의 칸으로 구현
+
+    HTML layout 적용기술
+        - CSS framework
+        - CSS float property
+        - CSS flexbox
+        - CSS grid
+
+
+
+HTML 입력 ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+    form element
+
+    input element
+        type: 입력양식
+        name: 입력한 값의 key 값
+        form 태그 안에 들가는 <input type="text"> 이나 <label for=""></label>
+        같은 태그들은 꼭 <form action=""></form> 태그 안에 있어야 한다.
+        
+
+
+HTML id, class name ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+    id
+        하나의 요소만 가능(페이지에서 유일)
+        CSS에서 식별자 사용 #id
+
+    class
+        여러 요소에 적용 가능
+        CSS에서 식별자 사용
+    
+    name
+        여러 요소에 적용가능
+        CSS에서 식별자 사용 불가
+        form 태그에서 submit 전송시 사용 ★★★★
+
+
+input 타입
+너무 많다...
+<a href="input.html" target="input 예제"><h3>input 예제</h3></a>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS overflow</title>
+    <style>
+        div{
+            border: 1px solid green;
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+        }
+        div.container1{
+            white-space: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+        div.container2{
+            overflow-x: scroll;
+            overflow-y: scroll;
+        }
+        div.container3{
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <p>CSS overflow 속성은 요소내의 컨텐츠가 영역보다 많을 때 보여지는 속성입니다.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, quasi! Vel, quis in magni accusamus, beatae velit eius nobis, commodi earum magnam veniam non ab assumenda at optio totam iure!
+        </p>
+    </div>
+    <div class="container2">
+        <p>CSS overflow 속성은 요소내의 컨텐츠가 영역보다 많을 때 보여지는 속성입니다.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, quasi! Vel, quis in magni accusamus, beatae velit eius nobis, commodi earum magnam veniam non ab assumenda at optio totam iure!
+        </p>
+    </div>
+    <div class="container3">
+        <img src="../0309/images/amu.png" alt="아무거나">
+    </div>
+</body>
+</html>

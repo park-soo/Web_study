@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+</head>
+<body>
+    <form name="form1" action="#" method="get">
+        <fieldset>
+            <legend>text input</legend>
+            <input type="text" name="text1" placeholder="한줄 입력"><br>
+            <input type="text" name="text1" value="기본값" readonly><br>
+            <input type="password" name="pw" placeholder="암호입력" maxlength="6"><br>
+            <textarea name="message" cols="35" rows="5">여러줄 입력</textarea>
+        </fieldset>
+        <fieldset>
+            <legend>select</legend>
+            <label for="">radio button--</label><br>
+            <!-- 이름을 동일하게 해야만 중복이 안됌 -->
+            <input type="radio" name="lecture" value="html">HTML<br>
+            <input type="radio" name="lecture" value="css">CSS<br>
+            <input type="radio" name="lecture" value="java" checked>Java<br>
+            <input type="radio" name="lecture" value="script">JavaScript<br>
+
+            <label for="">check box--</label><br>
+            <input type="checkbox" name="lecture1" value="html">HTML<br>
+            <input type="checkbox" name="lecture1" value="css" checked>CSS<br>
+            <input type="checkbox" name="lecture1" value="java">Java<br>
+            <input type="checkbox" name="lecture1" value="script">JavaScript<br>
+
+            <label for="">drop down list</label>
+            <select name="fruit">
+                <option value="apple">사과</option>
+                <option value="orarnge">오렌지</option>
+                <option value="strawberry">딸기</option>
+                <option value="peach">복숭아</option>
+            </select>
+
+            <input list="fruits" name="fruit">
+            <!-- datalist 쓰는 가장 큰 특징은 내가 입력한 데이터도 보낼수 있다. -->
+            <datalist id="fruits">
+                <option value="apple">사과</option>
+                <option value="orarnge">오렌지</option>
+                <option value="strawberry">딸기</option>
+                <option value="peach">복숭아</option>
+            </datalist>
+        </fieldset>
+        <button type="submit">전송</button>
+        <input type="submit" value="전송">
+        <input type="reset">
+    </form>
+    
+    <form action="#" name="fileform" method="get" enctype="multipart/form-data">
+        <fieldset>
+            <legend>file</legend>
+            <!-- image/* audio/* video/* -->
+            <input type="file" name="upload" accept=".pptx,image/*" multiple> 
+            <!-- multiple 사용시 여러개 클릭 가능 -->
+        </fieldset>
+        <button type="submit">전송</button>
+    </form>
+    <form action="#" name="formEtc" method="get">
+        <input type="color" name="fav" id="fav" class="fav" placeholder="컬러픽커"><br>
+        <input type="date" name="dday" id="" placeholder="날짜" min="2002-01-01" max="2023-01-01"><br>
+        <input type="month" name="dmonth" id="" placeholder="날짜 월"><br>
+        <input type="time" name="dtime" id="" placeholder="시간"><br>
+        <input type="week" name="dweek" id="" placeholder="주" disabled><br> <!-- disabled 사용시 사용이 불가능하게 만듬 -->
+        <input type="email" name="eamil" id="" placeholder="이메일 형식 체크"><br>
+        <input type="search" name="search" id="" placeholder="검색"><br>
+        <input type="tel" name="telnum" id="" placeholder="***-****-****" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"><br>
+        <input type="url" name="page" id="" placeholder="url 주소"><br>
+        <input type="number" name="num" id="" placeholder="숫자입력" min="1" max="20" step="2" required><br> <!-- required 무조건 작성해야 submit이 됨.(필수사항 같은거) -->
+        <input type="image" src="0307/image/amu.png" alt="대체" width="48" height="48"><br>   
+
+        <input type="hidden" name="id" value="1234" placeholder="숨겨진 값"><br>
+
+        <button type="submin">제출</button>
+    </form>
+</body>
+</html>

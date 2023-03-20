@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator</title>
+</head>
+<body>
+    //ES6 이후, 함수 코드 블록의 실행을 일시 중지했다가
+    필요한 시점에서 재시작 할 수 있는 함수 => 제너레이터
+    yield next()
+    <script>
+        let x = 1;
+        // generator function은 작성
+        function* gen(){
+            x++;
+            yield;
+            console.log("x:",x);
+        }
+        function inc(){
+            x++;
+        }
+        let generator = gen();
+        generator.next();
+        console.log(x);
+        inc();
+        console.log(x);
+        generator.next();
+        console.log(x);
+        //yield -> generator.next() -> yield -> generator.next() -> yield
+
+        //async, await
+        //Promise와 generator의 연결을 위한 일종의 Syntactic sugar
+
+        async function gen2(){
+            const a = await new Promise((resolve)=>setTimeout(()=>resolve(1),3000));
+            console.log(a);
+            const b = await new Promise((resolve)=>setTimeout(()=>resolve(2),3000));
+            console.log(b);
+            const c = await new Promise((resolve)=>setTimeout(()=>resolve(3),3000));
+            console.log(c);
+        }
+        gen2();
+    </script>
+</body>
+</html>

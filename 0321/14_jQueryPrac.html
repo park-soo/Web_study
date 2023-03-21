@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>practice</title>
+        <script src="../0320/js/jquery-3.6.4.js"></script>
+    </head>
+    <body>
+        <!-- 메뉴를 선택 할 때마다 누적된 걸 보여준다 -->
+        <h1>오늘 점심은 뭘 먹었나용가리~~~??</h1>
+        
+        <input type="radio" name="food" id="korea">한식</input> <br>
+        <input type="radio" name="food" id="china">중식</input> <br>
+        <input type="radio" name="food" id="japan">일식</input> <br>
+        <input type="radio" name="food" id="america">양식</input> <br>
+
+        <h3>한식<span class="countKorea"></span><span class="addKorea"></span></h3>
+        <h3>중식<span class="countChina"></span><span class="addChina"></span></h3>
+        <h3>일식<span class="countJapan"></span><span class="addJapan"></span></h3>
+        <h3>양식<span class="countAmerica"></span><span class="addAmerica"></span></h3>
+
+        <script>
+            let countKorea = 0;
+            let countChina = 0;
+            let countJapan = 0;
+            let countAmerica = 0;
+
+            $('#korea').click(()=>{
+                $('.addKorea').append("■");
+                countKorea++;
+                $(".countKorea").html(`${countKorea}`);
+            });
+
+            $('#china').click(()=>{
+                $('.addChina').append("★");
+                countChina++;
+                $(".countChina").html(`${countChina}`);
+            });
+
+            $('#japan').click(()=>{
+                $('.addJapan').append("◆");
+                countJapan++;
+                $(".countJapan").html(`${countJapan}`);
+            });
+
+            $('#america').click(()=>{
+                $('.addAmerica').append("▲");
+                countAmerica++;
+                $(".countAmerica").html(`${countAmerica}`);
+            });
+        </script>
+
+<hr>
+
+    <h1>오늘 점심은 뭘 먹었나용가리~~~??</h1>
+
+    <h3 id="kor">한식<span class="countKorea1"></span><span class="addKorea1"></span></h3>
+    <h3 id="chi">중식<span class="countChina1"></span><span class="addChina1"></span></h3>
+    <h3 id="jap">일식<span class="countJapan1"></span><span class="addJapan1"></span></h3>
+    <h3 id="ame">양식<span class="countAmerica1"></span><span class="addAmerica1"></span></h3>
+    <script>
+            let countKorea1 = 0;
+            let countChina1 = 0;
+            let countJapan1 = 0;
+            let countAmerica1 = 0;
+
+                $('#kor').click(()=>{
+                $('.addKorea1').append("■");
+                countKorea1++;
+                $(".countKorea1").html(`${countKorea1}`);
+            });
+
+            $('#chi').click(()=>{
+                $('.addChina1').append("★");
+                countChina1++;
+                $(".countChina1").html(`${countChina1}`);
+            });
+
+            $('#jap').click(()=>{
+                $('.addJapan1').append("◆");
+                countJapan1++;
+                $(".countJapan1").html(`${countJapan1}`);
+            });
+
+            $('#ame').click(()=>{
+                $('.addAmerica1').append("▲");
+                countAmerica1++;
+                $(".countAmerica1").html(`${countAmerica1}`);
+            });
+    </script>
+    </body>
+</html>

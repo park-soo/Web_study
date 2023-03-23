@@ -18,23 +18,38 @@
             crossorigin="anonymous"></script>
     </head>
     <body>
-        <h2 id="clock">00:00:00</h2>
-        <form class="hidden" id="login-form">
-            <input required maxlength="15" type="text" placeholder="당신의 이름을 입력하세요." />
-            <input type="submit" value="로그인" id="loginInput" />
+        <h2 id="clock" class="h1 text-white">00:00:00</h2>
+        <form class="d-none row g-3" id="login-form">
+            <div class="col-auto">
+                <input required maxlength="15" type="text" placeholder="니 이름이 뭐꼬?" />
+            </div>
+            <div class="col-auto">
+                <input type="submit" value="로그인" id="loginInput" class="btn btn-primary" />
+            </div>
         </form>
-        <h1 class="hidden" id="greeting"></h1>
+        <p class="h2 d-none text-white" id="greeting"></p>
         <form id="todo-form">
-            <input required type="text" placeholder="할 일을 입력하고 엔터키를 누르세요." />
+            <input class="form-control" type="text" required placeholder="할 일을 함 적어보소" />
         </form>
-        <ul id="todo-list"></ul>
-        <div id="quote">
-            <span></span>
-            <span></span>
+        <div class="card" style="width: 18rem">
+            <div class="card-header">To Do List</div>
+            <ul id="todo-list" class="list-group list-group-flush bg-info"></ul>
         </div>
-        <div id="weather">
-            <span></span>
-            <span></span>
+        <div id="quote" class="contain-sm bg-white rounded-3">
+            <figure class="text-center">
+                <blockquote class="blockquote">
+                    <span></span>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    <span></span>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="card-body">
+            <div id="weather" class="card" style="width: 18rem">
+                <span></span>
+                <span></span>
+            </div>
         </div>
         <script src="js/clock.js"></script>
         <script src="js/greetings.js"></script>

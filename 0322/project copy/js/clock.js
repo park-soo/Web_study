@@ -1,6 +1,7 @@
 function clock() {
-    const clock = document.getElementById("clock");
+    // const clock = document.getElementById("clock");
     // const clock = document.querySelector('#clock');
+    const clock = $("#clock");
     const time = new Date();
     // const hours = time.getHours();
     // const minutes = time.getMinutes();
@@ -16,7 +17,12 @@ function clock() {
     const hours1 = String(time.getHours()).padStart(2, "0");
     const minutes1 = String(time.getMinutes()).padStart(2, "0");
     const seconds1 = String(time.getSeconds()).padStart(2, "0");
-    clock.innerHTML = `${hours1}:${minutes1}:${seconds1}`;
+
+    const ampm = time.getHours() >= 12 ? "PM" : "AM";
+    const hours2 = hours1 > 12 ? hours1 - 12 : hours1;
+
+    // clock.innerHTML = `${hours2}:${minutes1}:${seconds1} ${ampm}`;
+    clock.text(`${hours2}:${minutes1}:${seconds1} ${ampm}`);
 }
 
 clock();

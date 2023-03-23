@@ -7,6 +7,10 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
 
+// const toDoForm = $("#todo-form");
+// const toDoInput = $("#todo-form input");
+// const toDoList = $("#todo-list");
+
 const TODOKEY = "todos";
 let toDos = [];
 
@@ -31,7 +35,7 @@ function printToDo(newTodo) {
     const span = document.createElement("span");
     span.innerText = newTodo.text;
     const button = document.createElement("button");
-    button.innerText = "삭제";
+    button.innerText = "X";
     button.addEventListener("click", deleteToDo);
     li.appendChild(span);
     li.appendChild(button);

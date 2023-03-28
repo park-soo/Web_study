@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="../0320/js/jquery-3.6.4.js"></script>
+    </head>
+    <body>
+        <div>
+            <p class="1">11111</p>
+            <p class="2">22222</p>
+            <p class="3">33333</p>
+        </div>
+        <script>
+            $("div").find("p.3").css("background-color", "red");
+        </script>
+
+        <div>
+            <p class="1">11111</p>
+            <p class="2">22222</p>
+            <p class="3">33333</p>
+        </div>
+        <script>
+            $("div").children("p.3").css("background-color", "red");
+        </script>
+
+        <div class="a">
+            <div class="b">
+                <p class="1">11111</p>
+                <p class="2">22222</p>
+                <p class="3">33333</p>
+            </div>
+        </div>
+        <script>
+            $("div.a").children("p.2").css("background-color", "red");
+            $("div.a").find("p.3").css("background-color", "red");
+        </script>
+    </body>
+</html>

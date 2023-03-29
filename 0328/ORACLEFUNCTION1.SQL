@@ -199,7 +199,7 @@ FROM EMP;
 --     ,수당(COMM이 없는 사람은 N/A로 표시)
 
 SELECT EMPNO, ENAME
-                                ,TO_CHAR(HIREDATE,'YYYYMM/DD') AS 입사일
+                                ,TO_CHAR(HIREDATE,'YYYY/MM/DD') AS 입사일
                                 ,TO_CHAR(NEXT_DAY(ADD_MONTHS(HIREDATE, 3),'월요일'),'YYYY/MM/DD') AS 세달뒤월요일
                                 ,NVL2(COMM,TO_CHAR(COMM),'N/A') AS 수당
 FROM EMP;
